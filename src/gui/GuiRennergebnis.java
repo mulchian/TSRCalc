@@ -39,6 +39,7 @@ public class GuiRennergebnis implements ActionListener, KeyListener {
     private JTextField txfManager = new JTextField();
 
     private JButton btnManagerHinzufuegen = new JButton("Manager hinzufügen");
+    private JButton btnSpeichern = new JButton("Rennergebnis speichern");
 
     private JSpinner spnManager1 = new JSpinner(new SpinnerListModel(verwaltManager.bekommeManagerliste()));
     private JSpinner spnManager2 = new JSpinner(new SpinnerListModel(verwaltManager.bekommeManagerliste()));
@@ -77,10 +78,12 @@ public class GuiRennergebnis implements ActionListener, KeyListener {
         txfManager.setBounds(350, 75, 130, 20);
 
         btnManagerHinzufuegen.setBounds(300, 100, 150, 20);
+        btnSpeichern.setBounds(25, 300, 200, 20);
 
         txfSaison.addKeyListener(this);
         txfRennen.addKeyListener(this);
         btnManagerHinzufuegen.addActionListener(this);
+        btnSpeichern.addActionListener(this);
 
         jPanel.add(lblSaison);
         jPanel.add(lblRennen);
@@ -106,6 +109,7 @@ public class GuiRennergebnis implements ActionListener, KeyListener {
         jPanel.add(txfManager);
 
         jPanel.add(btnManagerHinzufuegen);
+        jPanel.add(btnSpeichern);
 
         return jPanel;
     }
